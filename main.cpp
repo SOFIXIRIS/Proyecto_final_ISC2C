@@ -7,6 +7,15 @@
 //
 
 #include <iostream>
+#include <windows.h>  
+ void gotoxy(int x,int y){  //desplazarse con el teclado
+      HANDLE hcon;  
+      hcon = GetStdHandle(STD_OUTPUT_HANDLE);  
+      COORD dwPos;  
+      dwPos.X = x;  
+      dwPos.Y= y;  
+      SetConsoleCursorPosition(hcon,dwPos);  
+ }  
 
 int main(int argc, const char * argv[]) {
     // insert code here...
